@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/Fredoka/static/Fredoka_Expanded-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: 'normal'
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/Bebas/Bebas-Regular.otf') format('opentype');
+    font-weight: 600;
+    font-style: 'normal'
+}
+
+h1 {
+    font-family: 'Bebas', 'sans';
+}
