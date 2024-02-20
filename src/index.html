@@ -12,56 +12,198 @@
 <body class="dark:bg-gray-850 dark:text-white">
 
   <!-- Navbar -->
-  <nav class="bg-gray-800 p-4">
-    <div class="hidden md:flex">
+  <nav class="bg-gray-800 fixed left-0 top-0 right-0 backdrop-blur-md dark:backdrop-blur-none z-30 flex w-full flex-nowrap items-center  p-4 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 dark:bg-slate-800/80 lg:flex-wrap lg:justify-start">
+    <!-- Large screen nav -->
+    <div class="hidden w-full md:flex md:justify-between top-0 sticky gap-x-4">
       <!-- Left Side: Navigation Buttons -->
-      <div class="flex items-center justify-start">
-          <button class="text-white mr-4">Home</button>
-          <button class="text-white mr-4">About</button>
-          <button class="text-white">Contact</button>
+      <div class="flex items-center w-full justify-end gap-x-6">
+        <a
+          class="flex items-center text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+          href="#" type="button" id="dropdownMenuButton1"
+          data-te-dropdown-toggle-ref aria-expanded="false">Portfolio</a>
+          <ul
+            class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+            aria-labelledby="dropdownMenuButton2"
+            data-te-dropdown-menu-ref>
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                href="#" data-te-dropdown-item-ref
+                >Action</a>
+            </li>
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                href="#" data-te-dropdown-item-ref
+                >Another action</a>
+            </li>
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600"
+                href="#" data-te-dropdown-item-ref
+                >Something else here</a>
+            </li>
+          </ul>
+        <a
+          class="flex items-center text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-100 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-amber-500"
+          href="#" type="button" id="dropdownMenuButton2"
+          data-te-dropdown-toggle-ref aria-expanded="false">Services</a>
       </div>
 
       <!-- Center: Logo/Brand Image -->
-      <div class="flex items-center justify-center flex-grow">
-          <img src="your-logo.png" alt="Logo" class="w-12 h-12">
+      <div class="flex items-center align-middle justify-center flex-shrink-0">
+          <a href="/" target="_self"><img src="./images/logo.webp" alt="Logo" class="w-12 h-12"></a>
       </div>
 
       <!-- Right Side: Navigation Buttons -->
-      <div class="flex items-center justify-end">
-          <button class="text-white mr-4">Services</button>
-          <button class="text-white">Portfolio</button>
+      <div class="flex items-center w-full justify-start gap-x-6">
+          <button class="text-white">Blog</button>
+          <button class="text-white">Contact Us</button>
       </div>
     </div>
 
     <!-- Hamburger Icon for Small Screens -->
-    <div class="md:hidden">
-        <button class="text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
+    <div class="md:hidden py-2 px-4 flex w-full justify-between" data-te-navbar-ref>
+      <div class="mx-2">
+        <a class="text-xl text-neutral-100" href="#">
+          <img src="./images/simmons_dark.webp" alt="Simmons Studio" width="148" class="h-8 aspect-auto" >
+        </a>
+      </div>
+
+      <button class="dark:text-white" type="button"
+        data-te-collapse-init
+        data-te-target="#navbarSupportedContent3"
+        aria-controls="navbarSupportedContent3"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="[&>svg]:w-7">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </span>
+      </button>
+
+      <!-- Collapsible navbar container -->
+      <div
+        class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+        id="navbarSupportedContent5"
+        data-te-collapse-item>
+        <!-- Left links -->
+        <ul
+          class="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row"
+          data-te-navbar-nav-ref>
+          <!-- Home link -->
+          <li
+            class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+            data-te-nav-item-ref>
+            <a
+              class="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              aria-current="page"
+              href="#"
+              data-te-nav-link-ref
+              >Home</a
+            >
+          </li>
+          <!-- Link -->
+          <li
+            class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+            data-te-nav-item-ref>
+            <a
+              class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#"
+              data-te-nav-link-ref
+              >Link</a
+            >
+          </li>
+          <!-- Dropdown link -->
+          <li
+            class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+            data-te-nav-item-ref
+            data-te-dropdown-ref>
+            <!-- Dropdown -->
+            <a
+              class="flex items-center text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#"
+              type="button"
+              id="dropdownMenuButton2"
+              data-te-dropdown-toggle-ref
+              aria-expanded="false">
+              Dropdown
+              <span class="ml-1 w-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5">
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </a>
+
+          </li>
+          <!-- Disabled link -->
+          <li
+            class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+            data-te-nav-link-ref>
+            <a
+              class="text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              >Disabled</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
 
-  <section id="hero" class="container-xl m-auto  max-h-screen bg-slate-800 dark:bg-gray-850 text-white">
-    <div class="flex flex-col items-center justify-center min-h-screen">
-      <h1 class="text-5xl font-bold text-amber-500 mb-4">Simmons Multimedia Studio</h1>
+  <section id="hero" class="flex justify-center mx-auto w-full min-h-screen bg-slate-800 dark:bg-gray-850 text-white">
+    <div class="container flex flex-col items-center justify-center min-h-screen -m-6 text-center">
+      <h1 class="text-5xl font-bold text-amber-500 mb-4">A Multimedia Website</h1>
       <p class="text-lg text-center px-8">Ignite Your Brand with Cutting-Edge Visuals, Sound and Interaction.</p>
        <button class="bg-amber-500 text-white py-2 px-6 rounded-md mt-4 hover:bg-white hover:text-amber-500">Explore Our Portfolio</button>
     </div>
   </section>
 
-  <section id="heservicesro" class="container m-auto  max-h-screen bg-slate-600 dark:bg-gray-700 text-white">
-    <div class="flex flex-col items-center justify-center min-h-screen">
+  <section id="service" class="flex justify-center mx-auto w-full min-h-screen bg-slate-600 dark:bg-gray-700 text-white">
+    <div class="container flex flex-col items-center justify-center min-h-screen">
       <h1 class="text-5xl font-bold text-slate-600 mb-4">Services</h1>
       <p class="text-base text-slate-400 text-center px-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus nisi praesentium quibusdam. Quasi exercitationem tempora dolorem tempore totam obcaecati magni accusantium possimus molestiae aut id debitis similique alias, ut quod.</p>
-       <button class="bg-amber-500 text-white py-2 px-6 rounded-md mt-4 hover:bg-white hover:text-amber-500">Explore Our Portfolio</button>
     </div>
   </section>
 
-  <!-- <script src="./script.js"></script> -->
+  <section id="clients" class="mx-auto w-full min-h-screen bg-slate-800 dark:bg-gray-850 text-white overflow-hidden">
+    <h1 class="float-start text-right text-6xl md:text-8xl -my-3 -mx-2 md:-my-5 md:-mx-2 p-0 font-bold dark:text-white/10 ">Clients</h1>
+    <div class="float-none flex flex-col py-10 w-full items-center justify-center">
+      <p class="text-lg text-center px-4">Ignite stuff!!</p>
+      <p class="text-lg text-center px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, aliquid? In illo ducimus libero quas laborum distinctio similique facilis ab, voluptatibus deleniti recusandae voluptas odio incidunt id, itaque amet necessitatibus.</p>
+    </div>
+  </section>
+
+  <footer class="flex justify-center w-full m-auto bg-slate-850 dark:bg-gray-700 text-white py-6">
+    <div class="container  grid columns-12 justify-center">
+      <ul class="">
+        <li><h5 class="text-neutral-500">Heading</h5></li>
+        <li><a href="#">Home</a></li>
+        <li>Portfolio</li>
+        <li>Services</li>
+        <li>Blog</li>
+      </ul>
+
+      <ul class="">
+        <li><h5 class="text-neutral-500">Heading 2</h5></li>
+        <li>About</li>
+        <li>Clients</li>
+        <li>Work</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./js/navigation.js"></script>
 </body>
 </html>
