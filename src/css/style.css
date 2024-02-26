@@ -1,5 +1,17 @@
 @font-face {
     font-family: 'Fredoka';
+    src: url('../fonts/Fredoka/static/Fredoka-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: 'normal'
+}
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/Fredoka/static/Fredoka-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: 'normal'
+}
+@font-face {
+    font-family: 'Fredoka';
     src: url('../fonts/Fredoka/static/Fredoka-Bold.ttf') format('truetype');
     font-weight: 600;
     font-style: 'normal'
@@ -12,6 +24,7 @@
     font-style: 'normal'
 }
 
+// Not ideal for numerics
 @font-face {
     font-family: 'Quicksand';
     src: url('../fonts/Neue.ttf') format('truetype');
@@ -20,7 +33,7 @@
 }
 
 body p {
-    font-family: 'Quicksand', 'sans';
+    font-family: 'Fredoka', 'sans';
 }
 h1 {
     font-family: 'Bebas', 'sans';
